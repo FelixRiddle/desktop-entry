@@ -1,0 +1,27 @@
+{
+  "name": "felixriddle.desktop-entry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "ts-node index.ts",
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/argparse": "^2.0.16",
+    "@types/node": "^20.12.7",
+    "argparse": "^2.0.1",
+    "dotenv": "^16.4.5",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  }
+}
