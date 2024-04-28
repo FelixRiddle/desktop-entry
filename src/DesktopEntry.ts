@@ -13,6 +13,8 @@ export default class DesktopEntry {
     cmd: string;
     comment: string = "Some system app, please don't remove";
     fileName: string;
+    // App path
+    path: string = process.cwd();
     
     /**
      * 
@@ -25,6 +27,14 @@ export default class DesktopEntry {
     constructor(fileName: string, cmd: string) {
         this.fileName = `${fileName}.desktop`;
         this.cmd = cmd;
+    }
+    
+    /**
+     * Set path
+     */
+    setPath(path: string) {
+        this.path = path;
+        return this;
     }
     
     /**
@@ -58,6 +68,7 @@ export default class DesktopEntry {
         this.data = this.data.concat(`Type=${this.desktopEntryType}`, "\n");
         this.data = this.data.concat(`Name=${this.name}`, "\n");
         this.data = this.data.concat(`Comment=${this.comment}`, "\n");
+        this.data = this.data.concat(`Path=${this.path}`, "\n");
         this.data = this.data.concat(`Exec=${this.cmd}`, "\n");
         
         return this.data;
