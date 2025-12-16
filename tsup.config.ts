@@ -4,7 +4,7 @@ import { defineConfig } from "tsup";
  * Export tsup configuration
  */
 export default defineConfig({
-    entry: ["index.ts"],
+    entry: ["./src/index.ts"],
     format: ["cjs", "esm"], //Build for cjs and esm
     dts: true, // Genearte declaration file (.d.ts)
     splitting: false,
